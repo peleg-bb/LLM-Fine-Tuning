@@ -1,5 +1,5 @@
 import neptune
-import secret_config
+#import secret_config
 run = neptune.init_run(
     project="secret_config.neptune_project",
     api_token="secret_config.neptune_api_token",
