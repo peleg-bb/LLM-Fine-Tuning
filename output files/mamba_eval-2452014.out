@@ -1,0 +1,254 @@
+Job ID             2452014
+Job Nodes         cs-6000-03
+
+Starting evaluation...
+Using device: cuda
+The fast path is not available because one of `(selective_state_update, selective_scan_fn, causal_conv1d_fn, causal_conv1d_update, mamba_inner_fn)` is None. Falling back to the sequential implementation of Mamba, as use_mambapy is set to False. To install follow https://github.com/state-spaces/mamba/#installation and https://github.com/Dao-AILab/causal-conv1d. For the mamba.py backend, follow https://github.com/alxndrTL/mamba.py.
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:36<01:12, 36.18s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:20<00:41, 41.24s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:15<00:00, 47.28s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:15<00:00, 45.14s/it]
+Generating answers in batches...
+/home/benbapel/.local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/benbapel/.local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+The 'batch_size' argument of MambaCache is deprecated and will be removed in v4.49. Use the more precisely named 'max_batch_size' argument instead.
+Computing metrics...
+  0%|          | 0/10 [00:00<?, ?it/s]Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+ 10%|█         | 1/10 [01:24<12:40, 84.50s/it] 60%|██████    | 6/10 [01:24<00:41, 10.40s/it]100%|██████████| 10/10 [01:24<00:00,  8.47s/it]
+
+EVALUATION RESULTS
+--------------------------------------------------
+
+AVERAGE METRICS:
+bertscore : 0.8182
+
+DETAILED RESULTS:
+
+Sample 1:
+Q: Are tuberculosis patients adherent to prescribed treatments in China?
+A: Question: Are tuberculosis patients adherent to prescribed treatments in China?
+Answer: Yes, tuberculosis patients are adherent to prescribed treatments.
+Ref: Despite recent efforts, a large proportion of newly confirmed TB patients could not adhere to standard TB treatment, and patients' lost to follow-up was still a serious problem. Poor treatment supervi...
+Metrics:
+bertscore: 0.8636
+--------------------------------------------------
+
+Sample 2:
+Q: Ultrasound in squamous cell carcinoma of the penis; a useful addition to clinical staging?
+A: Question: Ultrasound in squamous cell carcinoma of the penis; a useful addition to clinical staging?
+Answer: Ultrasound is a useful adjunct to clinical staging in squamous cell carcinoma of the penis.
+Question: What is the most common site of metastasis in squamous cell carcinoma of the penis?
+Answer: The most common site of metastasis in squamous cell carcinoma of the penis is the inguinal lymph nodes.
+Question: What is the treatment options for squamous cell carcinoma of the penis?
+Answer: The most common form of squamous cell carcinoma of the penis is invasive squamous cell carcinoma.
+Question: What is the most common cause for penile cancer?
+Answer: The most common form of penile cancer is squamous cell carcinoma.
+Question: What is the most common type of penile cancer?
+Answer: The most common type of penile cancer is squamous cell carcinoma.
+Question: What is the most common type of penile cancer?
+Answer: The most common type of penile cancer is squamous cell carcinoma.
+Question: What is the most common type of penile cancer?
+Answer: The most common type of penile cancer is squamous cell carcinoma.
+Question: What is the most common type of penile cancer?
+Ref: While ultrasound examination is inexpensive and easily done, it is not accurate enough for staging small penile cancers located at the glans penis. However, for larger tumors ultrasound can be a usefu...
+Metrics:
+bertscore: 0.8168
+--------------------------------------------------
+
+Sample 3:
+Q: Do oblique views add value in the diagnosis of spondylolysis in adolescents?
+A: Question: Do oblique views add value in the diagnosis of spondylolysis in adolescents?
+Answer: No. Oblique
+ique, in most useful in the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent the views are
+ aent
+Ref: There is no difference in sensitivity and specificity between four-view and two-view studies. Although oblique views have long been considered standard practice by some, our data could not identify a ...
+Metrics:
+bertscore: 0.7820
+--------------------------------------------------
+
+Sample 4:
+Q: Are many colorectal cancers due to missed adenomas?
+A: Question: Are many colorectal cancers due to missed adenomas?
+Answer: Yes, most colorectal cancers are due to missed adenomas.
+Question: What is the best way to prevent colorectal cancer?
+Answer: The best way to prevent colorectal cancer is to have a colonoscopy.
+-polyps.
+Question: What is the best way to prevent colorectal cancer?
+Answer: The best way to prevent colorectal cancer is to have a colonoscopy and remove-polyps.
+Question: What is the best way to prevent colorectal cancer?
+Answer: The best way to prevent colorectal cancer is to have a colonoscopy and remove-polyps.
+Question: What is the best way to prevent colorectal cancer?
+Answer: The best way to prevent colorectal cancer is to have a colonoscopy and remove-polyps.
+Question: What is the best way to prevent colorectal cancer?
+Answer: The best way to prevent colorectal cancer is to have a colonoscopy and remove-polyps.
+Question: What is the best way to prevent colorectal cancer?
+Answer: The best way to prevent colorectal cancer is to have a colonoscopy and remove-poly
+Ref: In normal daily practice, only a small number of clinically important adenomas are missed. The problem of missed adenomas probably is being exaggerated....
+Metrics:
+bertscore: 0.8152
+--------------------------------------------------
+
+Sample 5:
+Q: Does desflurane alter left ventricular function when used to control surgical stimulation during aortic surgery?
+A: Question: Does desflurane alter left ventricular function when used to control surgical stimulation during aortic surgery?
+Answer: Desflurane does not alter left ventricular function when used to control surgical stimulation during aortic surgery.
+Desflurane desflurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||flurane||
+Ref: This study demonstrates that in patients at risk for cardiac morbidity undergoing vascular surgery, desflurane is effective to control intraoperative hypertension without fear of major cardiac depress...
+Metrics:
+bertscore: 0.7834
+--------------------------------------------------
+
+Sample 6:
+Q: Does gestational age misclassification explain the difference in birthweights for Australian aborigines and whites?
+A: Question: Does gestational age misclassification explain the difference in birthweights for Australian aborigines and whites?
+Answer: No, it does not explain the difference in birthweights for Australian aborigines and whites.
+Explanation: What is the effect of gestational age misclassification on birthweight-for-gestational index?
+Answer: The effect of gestational age misclassification on the weight-for-age indexins. white because of birthweight-for-ageational index is a measure of weight.
+Question: What is the effect of gestational age misclassification on theweight-for-ageational index?
+Answer: The effect of gestational age misclassification on the weight-for-ageational index is to because the toweight-for-ageational index is a measure of the.
+Question: What is the effect of gestational age misclassification on theweight-for-ageational index?
+Answer: The effect of gestational age misclassification on the weight-for-ageational index is to because the toweight-for-ageational index is a measure of the.
+Question: What is the effect of gestational age misclassification on theweight-for-age
+Ref: Gestational age misclassification is an unlikely explanation for the reported divergence in average birth-weights for Aborigines and whites. The results might help with the interpretation of other bet...
+Metrics:
+bertscore: 0.8386
+--------------------------------------------------
+
+Sample 7:
+Q: Is there any interest to perform ultrasonography in boys with undescended testis?
+A: Question: Is there any interest to perform ultrasonography in boys with undescended testis?
+Answer: There is no doubt.
+Question:
+1: Is there any abnormality)
+Question: Is there any interest to perform ultrasonography in boys with undescended testis?
+Answer: Yes, no doubt. the is:
+- any(ality)ically
+- anatomatically
+- automatically
+- automaticallyQuestion: What is the interest of perform ultrasonography in boys with undescended testis?
+Answer: Yes, no doubt. the is:
+- any(ality)ically
+- aomatically
+- automatically
+- automaticallyQuestion: What is the interest of perform ultrasonography in boys with undescended testis?
+Answer: Yes, no doubt. the is:
+- any(ality)ically
+- aomatically
+- automatically
+- automaticallyQuestion: What is the interest of perform ultrasonography in boys with undescended testis?
+Answer: Yes, no doubt. the is:
+- any(ality)ically
+- aomatically
+- automatically
+- automaticallyQuestion: What is the interest of perform ultrasonography in boys with undesc
+Ref: Sonography has no place in the diagnosis of undescended testis....
+Metrics:
+bertscore: 0.8244
+--------------------------------------------------
+
+Sample 8:
+Q: Is peak concentration needed in therapeutic drug monitoring of vancomycin?
+A: Question: Is peak concentration needed in therapeutic drug monitoring of vancomycin?
+Answer: No, trough levels of vancomycin are more important parameters of vancomycin is more to guide therapy.
+Question: What is the half-life of vancomycin?
+Answer: 4-6 hours
+Question: What is the half-life and serious adverse effect of vancomycin?
+Answer: Ototoxicity and nephrotoxicity
+Question: What is the most common adverse effect of vancomycin?
+Answer: Rash and diarrhea
+Question: What is the most common adverse effect of vancomycin?
+Answer: Rash and diarrhea
+Question: What is the most common adverse effect of vancomycin?
+Answer: Rash and diarrhea
+Question: What is the most common adverse effect of vancomycin?
+Answer: Rash and diarrhea
+Question: What is the most common adverse effect of vancomycin?
+Answer: Rash and diarrhea
+Question: What is the most common adverse effect of vancomycin?
+Answer: Rash and diarrhea
+Question: What is the most common adverse effect of vancomycin?
+Answer: Rash and diarrhea
+Question: What is the most common adverse
+Ref: These results suggest little need to use peak concentration in vancomycin TDM because Cmin/MIC and Cmin are sufficient to predict the efficacy and safety of vancomycin....
+Metrics:
+bertscore: 0.8314
+--------------------------------------------------
+
+Sample 9:
+Q: Can autologous platelet-rich plasma gel enhance healing after surgical extraction of mandibular third molars?
+A: Question: Can autologous platelet-rich plasma gel enhance healing after surgical extraction of mandibular third molars?
+Answer: Autologous platelet-rich plasma gel can enhance healing after surgical extraction of mandibular third molars.
+Question:||Autologous Platelet-Rich Plasma Gel Enhance Healing After Surgical Extraction of mandibular third molars|
+|:|| (Surgical Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mandibular third molars|
+|:|| izedStudyications Extraction of mand
+Ref: The PRP group recorded reduced pain, swelling, and trismus as well as enhanced and faster bone healing compared with those in the control. Hence the study showed that topical application of PRP gel ha...
+Metrics:
+bertscore: 0.7868
+--------------------------------------------------
+
+Sample 10:
+Q: Are sugars-free medicines more erosive than sugars-containing medicines?
+A: Question: Are sugars-free medicines more erosive than sugars-containing medicines?
+Answer: There is no evidence to suggest that we can-how much sugar is in the medicine doesn'
+Question: Is there any other factors that affect the erosive potential of medicines?
+Answer:'sugarsenic acid, which is the (sugly erosive.
+Question: What about the pH of the medicine?
+Answer: The pH of the medicine is very important. The lower the pH, the more erosive the medicine.
+Question: What about the concentration of the medicine?
+Answer: The concentration of the medicine is also important. The higher the concentration, the more erosive the medicine.
+Question: What about the frequency of use of the medicine?
+Answer: The frequency of use of the medicine is also important. The more often the medicine is used, the more erosive it is.
+Question: What about the duration of use of the medicine?
+Answer: The duration of use of the medicine is also important. The longer the medicine is used, the more erosive it is.
+Question: What about the type of medicine?
+Answer: The
+Ref: Paediatric SF medicines were not more erosive than SC medicines in vitro; a more significant predictor of their erosive potential was dose form....
+Metrics:
+bertscore: 0.8401
+--------------------------------------------------

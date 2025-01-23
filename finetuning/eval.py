@@ -18,9 +18,10 @@ class Evaluator:
     def __init__(self, base_model_path="tiiuae/falcon-mamba-7b", adapter_path="models/mamba-final"):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         print(f"Using device: {self.device}")
-        
+
         self.tokenizer = AutoTokenizer.from_pretrained(base_model_path)
-        self.model = AutoModelForCausalLM.from_pretrained(adapter_path).to(self.device)
+        self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.model = AutoModelForCausalLM.from_pretrained(adapter_path).to(self.device).half()
         self.model.eval()
         
         # self.meteor = evaluate.load('meteor')
@@ -33,7 +34,10 @@ class Evaluator:
         for i in range(0, len(questions), batch_size):
             batch = questions[i:i + batch_size]
             prompts = [f"Question: {q}\nAnswer:" for q in batch]
-            inputs = self.tokenizer(prompts, return_tensors="pt", padding=True, truncation=True).to(self.device)
+            inputs = self.tokenizer(prompts,
+                                    return_tensors="pt",
+                                    padding=True,
+                                    truncation=True, max_length=max_length).to(self.device)
             
             with torch.no_grad():
                 outputs = self.model.generate(

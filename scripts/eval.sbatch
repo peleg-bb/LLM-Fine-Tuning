@@ -5,7 +5,7 @@
 #SBATCH --output=output/mamba_eval-%J.out        
 #SBATCH --mail-user=kopansev@post.bgu.ac.il     
 #SBATCH --mail-type=ALL                       
-#SBATCH --gpus=rtx_3090:1                     
+#SBATCH --gpus=rtx_4090:1
 #SBATCH --mem=32G                             
 
 echo -e "Job ID             $SLURM_JOBID"
