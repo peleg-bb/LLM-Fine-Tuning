@@ -1,3 +1,0 @@
-HUGGING_FACE_KEY = "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"
-neptune_project="peleg-bb/SciCommLLM"
-neptune_api_token="eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiIwNWZhZjA5MC1hYTBhLTRlM2UtYmIwMS01ODQ5ZTAzMjM2ZTAifQ=="
