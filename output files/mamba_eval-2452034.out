@@ -1,0 +1,920 @@
+Job ID             2452034
+Job Nodes         ise-cpu256-21
+
+Starting evaluation...
+Using device: cuda
+The fast path is not available because one of `(selective_state_update, selective_scan_fn, causal_conv1d_fn, causal_conv1d_update, mamba_inner_fn)` is None. Falling back to the sequential implementation of Mamba, as use_mambapy is set to False. To install follow https://github.com/state-spaces/mamba/#installation and https://github.com/Dao-AILab/causal-conv1d. For the mamba.py backend, follow https://github.com/alxndrTL/mamba.py.
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:49<01:39, 49.98s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:50<00:56, 56.18s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:29<00:00, 48.28s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:29<00:00, 49.79s/it]
+Generating answers in batches...
+/home/benbapel/.local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/benbapel/.local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+The 'batch_size' argument of MambaCache is deprecated and will be removed in v4.49. Use the more precisely named 'max_batch_size' argument instead.
+Computing metrics...
+  0%|          | 0/200 [00:00<?, ?it/s]Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  0%|          | 1/200 [00:36<2:02:30, 36.94s/it]  2%|▎         | 5/200 [00:37<17:57,  5.52s/it]    4%|▍         | 9/200 [00:37<07:59,  2.51s/it]  7%|▋         | 14/200 [00:37<03:57,  1.28s/it]  9%|▉         | 18/200 [00:37<02:30,  1.21it/s] 11%|█         | 22/200 [00:37<01:38,  1.80it/s] 13%|█▎        | 26/200 [00:37<01:06,  2.62it/s] 15%|█▌        | 30/200 [00:37<00:45,  3.72it/s] 17%|█▋        | 34/200 [00:37<00:32,  5.18it/s] 19%|█▉        | 38/200 [00:37<00:23,  6.96it/s] 21%|██        | 42/200 [00:38<00:17,  9.24it/s] 23%|██▎       | 46/200 [00:38<00:12, 11.98it/s] 25%|██▌       | 50/200 [00:38<00:09, 15.14it/s] 27%|██▋       | 54/200 [00:38<00:07, 18.56it/s] 29%|██▉       | 58/200 [00:38<00:06, 21.70it/s] 31%|███       | 62/200 [00:38<00:05, 25.06it/s] 33%|███▎      | 66/200 [00:38<00:04, 27.96it/s] 35%|███▌      | 70/200 [00:38<00:04, 30.32it/s] 37%|███▋      | 74/200 [00:38<00:03, 32.40it/s] 39%|███▉      | 78/200 [00:39<00:03, 33.89it/s] 41%|████      | 82/200 [00:39<00:03, 35.12it/s] 43%|████▎     | 86/200 [00:39<00:03, 36.24it/s] 46%|████▌     | 91/200 [00:39<00:02, 37.70it/s] 48%|████▊     | 96/200 [00:39<00:02, 38.71it/s] 50%|█████     | 100/200 [00:39<00:02, 38.87it/s] 52%|█████▏    | 104/200 [00:39<00:02, 38.51it/s] 54%|█████▍    | 108/200 [00:39<00:02, 38.82it/s] 56%|█████▋    | 113/200 [00:39<00:02, 38.84it/s] 58%|█████▊    | 117/200 [00:40<00:02, 37.81it/s] 60%|██████    | 121/200 [00:40<00:02, 37.99it/s] 62%|██████▎   | 125/200 [00:40<00:01, 38.50it/s] 64%|██████▍   | 129/200 [00:40<00:01, 38.63it/s] 66%|██████▋   | 133/200 [00:40<00:01, 37.88it/s] 68%|██████▊   | 137/200 [00:40<00:01, 38.41it/s] 70%|███████   | 141/200 [00:40<00:01, 38.59it/s] 72%|███████▎  | 145/200 [00:40<00:01, 38.83it/s] 74%|███████▍  | 149/200 [00:40<00:01, 39.10it/s] 77%|███████▋  | 154/200 [00:40<00:01, 39.93it/s] 80%|███████▉  | 159/200 [00:41<00:01, 40.55it/s] 82%|████████▏ | 164/200 [00:41<00:00, 40.56it/s] 84%|████████▍ | 169/200 [00:41<00:00, 40.24it/s] 87%|████████▋ | 174/200 [00:41<00:00, 39.68it/s] 89%|████████▉ | 178/200 [00:41<00:00, 39.38it/s] 91%|█████████ | 182/200 [00:41<00:00, 38.77it/s] 93%|█████████▎| 186/200 [00:41<00:00, 38.24it/s] 95%|█████████▌| 190/200 [00:41<00:00, 38.06it/s] 97%|█████████▋| 194/200 [00:41<00:00, 38.26it/s] 99%|█████████▉| 198/200 [00:42<00:00, 37.47it/s]100%|██████████| 200/200 [00:42<00:00,  4.75it/s]
+
+EVALUATION RESULTS
+--------------------------------------------------
+
+AVERAGE METRICS:
+bertscore : 0.8259
+
+DETAILED RESULTS:
+
+Sample 1:
+Q: Two-year follow-up survey of patients with allergic contact dermatitis from an occupational cohort: is the prognosis dependent on the omnipresence of the allergen?
+A: Question: Two-year follow-up survey of patients with allergic contact dermatitis from an occupational cohort: is the prognosis dependent on the omnipresence of the allergen?
+Answer: No. No, the prognosis of course of the disease is dependent on the omnipresence of the allergen.
+Question: What is the prognosis of allergic contact dermatitis?
+Answer: The prognosis of allergic contact dermatitis is dependent on the omnipresence of the allergen.
+Question: What is the prognosis of allergic contact dermatitis?
+Answer: The prognosis of allergic contact dermatitis is dependent on the omnipresence of the allergen.
+Question: What is the prognosis of allergic contact dermatitis?
+Answer: The prognosis of allergic contact dermatitis is dependent on the omnipresence of the allergen.
+Question: What is the prognosis of allergic contact dermatitis?
+Answer: The prognosis of allergic contact dermatitis is dependent on the omnipresence of the allergen.
+Question: What is the prognosis of allergic contact dermatitis?
+Answer: The prognosis of allergic contact dermatitis is dependent on the omnipresence of the allergen.
+Question: What is the prognosis of allergic contact dermatitis?
+Answer: The prognosis of allergic contact dermatitis is dependent on
+Ref: At follow-up, patients with contact urticaria had significantly poorer prognosis than those with contact allergy, and there was a trend towards a poorer prognosis for those with contact allergy to rub...
+Metrics:
+bertscore: 0.8186
+--------------------------------------------------
+
+Sample 2:
+Q: Can calprotectin predict relapse risk in inflammatory bowel disease?
+A: Question: Can calprotectin predict relapse risk in inflammatory bowel disease?
+Answer: Yes, calprotectin is a useful marker for for predicting relapse risk in inflammatory bowel disease.
+Question: Can calprotectinprotectin level in inflammatory bowel disease?
+Answer: Theectinprotectin level in inflammatory bowel disease is > 50 mcg/g.
+Question: What is the normal range of calprotectin?
+Answer: The normal range of calprotectin is < 50 mcg/g.
+Question: What is the normal range of calprotectin in inflammatory bowel disease?
+Answer: The normal range of calprotectin in inflammatory bowel disease is < 50 mcg/g.
+Question: What is the normal range of calprotectin in ulcerative colitis?
+Answer: The normal range of calprotectin in ulcerative colitis is < 50 mcg/g.
+Question: What is the normal range of calprotectin in Crohn's disease?
+Answer: The normal range of calprotectin in Crohn's disease is < 50 mcg/g.
+Ref: Measuring calprotectin may help to identify UC and colonic CD patients at higher risk of clinical relapse....
+Metrics:
+bertscore: 0.8289
+--------------------------------------------------
+
+Sample 3:
+Q: Can nurse-led preoperative education reduce anxiety and postoperative complications of patients undergoing cardiac surgery?
+A: Question: Can nurse-led preoperative education reduce anxiety and postoperative complications of patients undergoing cardiac surgery?
+Answer: Yes, nurse-led preoperative education can reduce anxiety and postoperative complications of patients undergoing cardiac surgery.
+Ref: Preoperative education delivered by nurses reduced anxiety and postoperative complications of patients undergoing cardiac surgery, but it was not effective in reducing readmissions or length of stay....
+Metrics:
+bertscore: 0.9044
+--------------------------------------------------
+
+Sample 4:
+Q: Is there a discrepancy between patient and physician quality of life assessment?
+A: Question: Is there a discrepancy between patient and physician quality of life assessment?
+Answer: Yes, there is a discrepancy between patient and physician quality of life assessment.
+
+Question: What are the following sentence - "Physicians's important to note that the discrepancy between patient and physician quality of life assessment?
+Answer: It UpToDate article states that it is important to note that there is a discrepancy between patient and physician quality of life assessment.
+
+Question: How are the main finding of the study mentioned in the article?
+Answer: The main finding of the study mentioned in the article is that there is a discrepancy between patient and physician quality of life assessment.
+
+Question: What is the purpose of the study mentioned in the article?
+Answer: The purpose of the study mentioned in the article is to determine whether there is a discrepancy between patient and physician quality of life assessment.
+
+Question: What is the sample size of the study mentioned in the article?
+Answer: The sample size of the study mentioned in the article is not patients with advanced cancer. significant.
+Ref: This study confirms that physicians often differ from patients in the assessment of QoL. This is most likely due to a difference in patient-physician perception of "significant" LUTS and clearly demon...
+Metrics:
+bertscore: 0.8313
+--------------------------------------------------
+
+Sample 5:
+Q: Impact of MPH programs: contributing to health system strengthening in low- and middle-income countries?
+A: Question: Impact of MPH programs: contributing to health system strengthening in low- and middle-income countries?
+Answer: MPH programs contribute significantly contribute to health system strengthening in low- and middle-income countries through through.
+Question: Impact of the following is not a component of the World Health Organization (WHO's definition of health?
+Answer: The absence of disease is not a component of the WHO's definition of health.
+Question: What is the primary goal of public health system?
+Answer: The primary goal of a health system is to improve the health of the population.
+Question: What is the main components of the health system?
+Answer: The main components of the health system are service delivery, health workforce, health information, medical products, vaccines and technologies, financing, and leadership and governance.
+Question: What is the main components of the health system?
+Answer: The main components of the health system are service delivery, health workforce, health information, medical products, vaccines and technologies, financing, and leadership and governance.
+Question: What are the main components of the health system?
+Answer: The main components of the health system are service delivery, health workforce, health information, medical products,
+Ref: There was considerable impact at many levels; graduates were perceived to be able to contribute significantly to their workplaces and often had influence at the national level. Much of the impact desc...
+Metrics:
+bertscore: 0.8196
+--------------------------------------------------
+
+Sample 6:
+Q: Is diffusion-weighted imaging a significant indicator of the development of vascularization in hypovascular hepatocellular lesions?
+A: Question: Is diffusion-weighted imaging a significant indicator of the development of vascularization in hypovascular hepatocellular lesions?
+Answer: Yes.
+Question: 1:
+- 1.
+- 2.
+- 3.
+- 4.
+- 5.
+- 6.
+- 7.
+- 8.
+- 9.
+- 10.
+- 11.
+- 12.
+- 13.
+- 14.
+- 15.
+- 16.
+- 17.
+- 18.
+- 19.
+- 20.
+- 21.
+- 22.
+- 23.
+- 24.
+- 25.
+- 26.
+- 27.
+- 28.
+- 29.
+- 30.
+- 31.
+- 32.
+- 33.
+- 34.
+- 35.
+- 36.
+- 37.
+- 38.
+- 39.
+- 40.
+- 41.
+- 42.
+- 43.
+- 44.
+Ref: The signal intensity on DWI showed no significant difference in the development of vascularization....
+Metrics:
+bertscore: 0.8048
+--------------------------------------------------
+
+Sample 7:
+Q: Are failures of anterior cruciate ligament reconstruction associated with steep posterior tibial slopes?
+A: Question: Are failures of anterior cruciate ligament reconstruction associated with steep posterior tibial slopes?
+Answer: No, there is no association between steep posterior tibial slope and ACL reconstruction failure.
+Question: Is there differences in vivo biomechanical properties of the ACL?
+Answer: Yes, there are several studies that have measured the mechanical properties of the ACL.
+Question: What is the most common cause of ACL injury?
+Answer: The most common cause of ACL injury is a non-contact twisting injury.
+Question: What is the most common mechanism of ACL injury?
+Answer: The most common mechanism of ACL injury is a non-contact twisting injury.
+Question: What is the most common mechanism of ACL injury?
+Answer: The most common mechanism of ACL injury is a non-contact twisting injury.
+Question: What is the most common mechanism of ACL injury?
+Answer: The most common mechanism of ACL injury is a non-contact twisting injury.
+Question: What is the most common mechanism of ACL injury?
+Answer: The most common mechanism of ACL injury is a non-contact twisting injury.
+Question: What is the most common mechanism of ACL injury?
+Answer: The most common mechanism
+Ref: Both medial and lateral PTS were significantly steeper in failures of ACLR than the control group. Medial or lateral PTS ≥5° was a new risk factor of ACLR failure....
+Metrics:
+bertscore: 0.8167
+--------------------------------------------------
+
+Sample 8:
+Q: Does evidence-based practice improve patient outcomes?
+A: Question: Does evidence-based practice improve patient outcomes?
+Answer: Yes, evidence-based practice improves patient outcomes by ensuring that healthcare providers use the most effective and up-to-date treatments and interventions.
+
+Question: What are some examples of evidence-based practices in healthcare?
+Answer: Examples of evidence-based practices in healthcare include using antibiotics only when necessary to treat bacterial infections, using non-invasive ventilation for patients with respiratory failure, and using cognitive-behavioral therapy for depression.
+
+Question: How can healthcare providers implement evidence-based practice in their daily work?
+Answer: Healthcare providers can implement evidence-based practice in their daily work by staying up-to-date with the latest research and guidelines, collaborating with the evidence, and applying it to their clinical decision-making.
+
+Question: What are some challenges healthcare providers face when implementing evidence-based practice?
+Answer: Some challenges healthcare providers face when implementing evidence-based practice include lack of time, lack of resources, and resistance to change.
+
+Question: How can healthcare organizations support evidence-based practice?
+Answer: Healthcare organizations can support evidence-based practice by providing education and training to healthcare providers
+Ref: The EBP unit was associated with better patient outcomes and more efficient performance than achieved by the same physicians previously or by SP concurrently....
+Metrics:
+bertscore: 0.8187
+--------------------------------------------------
+
+Sample 9:
+Q: Multidisciplinary decisions in breast cancer: does the patient receive what the team has recommended?
+A: Question: Multidisciplinary decisions in breast cancer: does the patient receive what the team has recommended?
+Answer: No.
+
+Question: What is the most common reason for disagreement between the patient and the multidisciplinary team?
+Answer: The patient's preference.
+
+Question: What is the most common reason for disagreement between the patient and the multidisciplinary team?
+Answer: The patient's preference.
+
+Question: What is the most common reason for disagreement between the patient and the multidisciplinary team?
+Answer: The patient's preference.
+
+Question: What is the most common reason for disagreement between the patient and the multidisciplinary team?
+Answer: The patient's preference.
+
+Question: What is the most common reason for disagreement between the patient and the multidisciplinary team?
+Answer: The patient's preference.
+
+Question: What is the most common reason for disagreement between the patient and the multidisciplinary team?
+Answer: The patient's preference.
+
+Question: What is the most common reason for disagreement between the patient and the multidisciplinary team?
+Answer: The patient's preference.
+
+Question: What is the most common reason for disagreement between the patient and the multidisciplinary team?
+Answer: The patient's preference.
+Ref: The vast majority of MDT decisions are implemented. Management alteration was most often due to patient choice or additional information available after the MDT. A minority of management alterations w...
+Metrics:
+bertscore: 0.8124
+--------------------------------------------------
+
+Sample 10:
+Q: Does quilting suture prevent seroma in abdominoplasty?
+A: Question: Does quilting suture prevent seroma in abdominoplasty?
+Answer: No, quilting suture does not prevent seroma in abdoma.in abdominoplasty.in abdomin abdominoplasty.
+Question: abdominoplasty.
+Question: What is the best way to prevent seroma in abdominoplasty?
+Answer: The best way to prevent seroma in abdominoplasty is to use a drain.
+Question: What is the best way to prevent seroma in abdominoplasty?
+Answer: The best way to prevent seroma in abdominoplasty is to use a drain.
+Question: What is the best way to prevent seroma in abdominoplasty?
+Answer: The best way to prevent seroma in abdominoplasty is to use a drain.
+Question: What is the best way to prevent seroma in abdominoplasty?
+Answer: The best way to prevent seroma in abdominoplasty is to use a drain.
+Question: What is the best way to prevent seroma in abdominoplasty?
+Answer: The best way to prevent seroma in abdominoplasty is to use a drain.
+
+Ref: The quilting suture seems to be an efficient technique with which to prevent seroma formation....
+Metrics:
+bertscore: 0.8252
+--------------------------------------------------
+
+Sample 11:
+Q: Does feeding tube insertion and its timing improve survival?
+A: Question: Does feeding tube insertion and its timing improve survival?
+Answer: No, again, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,
+Ref: Neither insertion of PEG tubes nor timing of insertion affect survival....
+Metrics:
+bertscore: 0.7550
+--------------------------------------------------
+
+Sample 12:
+Q: Does prostate morphology affect outcomes after holmium laser enucleation?
+A: Question: Does prostate morphology affect outcomes after holmium laser enucleation?
+Answer: Yes.
+Question: Does prostate morphology is associated with the best outcomes after holmium laser enucleation?
+Answer: Prostate: 1.
+Ref: Those patients with trilobar prostate morphology are more likely to achieve a greater decrease in the PVR urine volume after holmium laser enucleation of the prostate. All other outcomes appeared to b...
+Metrics:
+bertscore: 0.8484
+--------------------------------------------------
+
+Sample 13:
+Q: Do acute changes in heart rate by isoproterenol affect aortic stiffness in patients with hypertension?
+A: Question: Do acute changes in heart rate by isoproterenol affect aortic stiffness in patients with hypertension?
+Answer: Isoproterenol acutely increases in 10 minutes) increases heart rate by isoproterenic receptor agonistoproterenol is a beta-adrenergic agonist.
+Question: What is the effect of isoproterenol on aortic stiffness in patients with hypertension?
+Answer: Isoproterenol acutely increases heart rate by beta-adrenergic agonist effect.
+Question: What is the effect of isoproterenol on aortic stiffness in patients with hypertension?
+Answer: Isoproterenol acutely increases heart rate by beta-adrenergic agonist effect.
+Question: What is the effect of isoproterenol on aortic stiffness in patients with hypertension?
+Answer: Isoproterenol acutely increases heart rate by beta-adrenergic agonist effect.
+Question: What is the effect of isoproterenol on aortic stiffness in patients with hypertension?
+Answer: Isoproterenol acutely increases heart rate by beta-adrenergic agonist effect.
+Question: What is the effect of isoproterenol on aortic stiffness in patients with hypertension?
+Answer: Isoproterenol acutely increases heart rate by beta-adren
+Ref: Aortic stiffness was not affected by acute changes in HR produced by isoproterenol which suggests that it is not necessary to consider acute changes in HR when measuring aortic PWV....
+Metrics:
+bertscore: 0.8185
+--------------------------------------------------
+
+Sample 14:
+Q: "Occult" posttraumatic lesions of the knee: can magnetic resonance substitute for diagnostic arthroscopy?
+A: Question: "Occult" posttraumatic lesions of the knee: can magnetic resonance substitute for diagnostic arthroscopy?
+Answer: "occult" lesion of the knee is defined as arthroentgenographic occult lesion of the knee (MROK) and is defined as an "lesion that is not visible on plain radiographs or arthrography, but is seen on magnetic resonance imaging (MRI)" 1)
+
+Question: "occult" posttraumatic knee knee is a magnetic resonanceroentgenographic occult lesion of the knee (MROK) and is defined as a "lesion that is not visible on plain radiographs or arthrography, but is seen on magnetic resonance imaging (MRI)." (
+3: "occult" lesiontraumatic knee knee is a magnetic resonanceroentgenographic occult lesion of the knee (MROK) and is defined as a "lesion that is not visible on plain radiographs or arthrography, but is seen on magnetic resonance imaging (MRI)." (
+4: "occult" lesiontraumatic knee knee is a magnetic resonanceroentgenographic occult lesion of the knee (MRO
+Ref: After comparing MR with arthroscopic findings and reviewing the available literature, we conclude that arthroscopy permits the direct visualization of even fine articular surface changes but does not ...
+Metrics:
+bertscore: 0.8060
+--------------------------------------------------
+
+Sample 15:
+Q: Could ESC (Electronic Stability Control) change the way we drive?
+A: Question: Could ESC (Electronic Stability Control) change the way we drive?
+Answer: Yes, it could.
+Question: Electronic Stability control is not been around long ago became standard on most new cars. “s a computer-controlled system that uses sensors to detect when a car is about to lose traction and then applies the brakes to individual wheels to keep the driver regain control.
+
+Question: Could ESC (Electronic Stability Control) change the way we drive?
+Answer: Yes, it could.
+
+Explanation: Electronic Stability Control (ESC) is a system that helps drivers maintain control of their vehicles during sudden maneuvers or slippery road conditions. It uses sensors to detect when a car is about to lose traction and then applies the brakes to individual wheels to help the driver regain control. This technology has been around for several years and has been proven to be effective in reducing the number of accidents caused by loss of control. As more and more cars are equipped with ESC, drivers may become more reliant on this technology and adjust their driving habits accordingly. For example, they may be less likely to overcorrect when steering or may be more cautious in slippery conditions. Overall, ESC has the potential to change
+Ref: Collectively, results suggest that behavioral adaptation to ESC is likely in certain drivers; however, its proven effectiveness in reducing the likelihood of being involved in a serious crash probably...
+Metrics:
+bertscore: 0.8251
+--------------------------------------------------
+
+Sample 16:
+Q: The insertion allele of the ACE gene I/D polymorphism. A candidate gene for insulin resistance?
+A: Question: The insertion allele of the ACE gene I/D polymorphism. A candidate gene for insulin resistance?
+Answer: Yes. (s than 1.0.
+Question: The insertion allele1 than 1.5.
+Answer: The ACE gene I/D polymorphism.
+Question: The.
+Question: The.
+Question: The.
+Question: The.
+Question: The.
+Question:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of theAnswer:.: of the.
+Question: The of theAnswer:.: of the.
+Question: The of theAnswer:.: of theAnswer:.: of the.
+Question: The of theAnswer:.: of the.
+Question: The.
+Question: The of the of of of of of of of theAnswer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:Answer:
+Ref: We conclude that increased cardiovascular risk of the DD genotype is not mediated through insulin resistance or abnormalities in fibrinolysis. Conversely, we report an increased sensitivity in NIDDM s...
+Metrics:
+bertscore: 0.7685
+--------------------------------------------------
+
+Sample 17:
+Q: Do ventricular arrhythmias in athletes subside over time?
+A: Question: Do ventricular arrhythmias in athletes subside over time?
+Answer: Yes.
+Question: Do ventricular arrhythmias in athletes?
+
+Step "Ventricular arrhythmias in athletes subside over time."
+
+Explanation: The correct answer is "Yes" because ventricular arrhythmias in athletes tend to subside over time as the heart adapts to the increased workload and the athlete's body becomes more efficient in handling the physical demands. The other options are incorrect because they do not accurately reflect the information provided in the question option "No" is incorrect because the paragraph states that arrhythmias in athletes subside over time. "Maybe" is incorrect because the paragraph provides a clear answer. "Unknown" is incorrect because the paragraph provides a clear answer that arrhythmias in athletes subside over time.
+Ref: Athletes engaged in competitive sports are more likely to develop ventricular arrhythmias during exercise. These arrhythmias subside over time when athletes are engaged in non-competitive sports....
+Metrics:
+bertscore: 0.8515
+--------------------------------------------------
+
+Sample 18:
+Q: Does ethnicity affect where people with cancer die?
+A: Question: Does ethnicity affect where people with cancer die?
+Answer: Yes, ethnicity of a person with cancer who are white affect where they die?
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer who are affect by where they live and
+Answer: Yes, it does.
+ with cancer
+Ref: Location of death varies by country of birth. BAME groups are more likely to die in a hospital and less likely to die at home or in a hospice. Further investigation is needed to determine whether thes...
+Metrics:
+bertscore: 0.7871
+--------------------------------------------------
+
+Sample 19:
+Q: Are patients with serious mental illness more likely to be admitted to nursing homes with more deficiencies in care?
+A: Question: Are patients with serious mental illness more likely to be admitted to nursing homes with more deficiencies in care?
+Answer: Yes, patients with serious mental illness are more likely to be admitted to nursing homes with more deficiencies in care.
+Explanation: : Are patients with serious mental illness more likely to be admitted to nursing homes with more deficiencies in care? ):: Yes, patients with serious mental illness are less serious mental illness are more likely to be admitted to nursing homes with fewer deficiencies in care.Yes, patients with serious mental illness are more likely to be admitted to nursing homes with more deficiencies in care. patients with a recent study found that patients with serious mental illness are more likely to be admitted to nursing homes with more deficiencies in care.
+Ref: Patients diagnosed with schizophrenia or bipolar disorder (ie, SMI) were more likely than other patients to be admitted to nursing homes with higher deficiency citations for both overall quality and c...
+Metrics:
+bertscore: 0.8491
+--------------------------------------------------
+
+Sample 20:
+Q: Does an additional antirotation U-Blade (RC) lag screw improve treatment of AO/OTA 31 A1-3 fractures with gamma 3 nail?
+A: Question: Does an additional antirotation U-Blade (RC) lag screw improve treatment of AO/OTA 31 A1-3 fractures with gamma 3 nail?
+Answer: Yes.
+
+Discussion: 1. Introduction
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. 
+22. 
+23. 
+24. 
+25. 
+26. 
+27. 
+28. 
+29. 
+30. 
+31. 
+32. 
+33. 
+34. 
+35. 
+36. 
+37. 
+38. 
+39. 
+40. 
+41. 
+42. 
+43. 
+44. 
+45. 
+46. 
+47. 
+48. 
+49. 
+50. 
+51. 
+52. 
+53.
+Ref: In our study the U-Blade (RC) lag screw did not reduce the cut-out in treatment of OTA/AO 31A1-3 fractures at all. Considering the longer duration of surgery and the higher costs of the U-Blade (RC) l...
+Metrics:
+bertscore: 0.7978
+--------------------------------------------------
+
+Sample 21:
+Q: The Omega-3 Index: a new risk factor for death from coronary heart disease?
+A: Question: The Omega-3 Index: a new risk factor for death from coronary heart disease?
+Answer: The Omega-3 Index is a measure of the amount of omega-3 fatty acids in red blood cells. It is expressed as a measure of long chain omega-3 fatty acid status of an individual. The Omega-3 Index is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega-3 fatty acids in red blood cells. It is a measure of the amount of omega
+Ref: The Omega-3 Index may represent a novel, physiologically relevant, easily modified, independent, and graded risk factor for death from CHD that could have significant clinical utility....
+Metrics:
+bertscore: 0.8056
+--------------------------------------------------
+
+Sample 22:
+Q: May mean platelet volume levels be a predictor in the diagnosis of pelvic inflammatory disease?
+A: Question: May mean platelet volume levels be a predictor in the diagnosis of pelvic inflammatory disease?
+Answer: Mean platelet volume (MPV) is a measure of the average size of platelets in the blood. Platelettes arelated to platelet production of, therefore, MPV not an independent predictor of disease. However, (PID is a common cause of lower abdominal pain in women. It is a polymicrobial infection of the upper genital tract that can lead to infertility and ectopic pregnancy. The diagnosis of PID is based on clinical symptoms of lower abdominal pain, cervical motion tenderness, and adnexal discharge. However,: The diagnosis of PID is based on clinical findings of lower abdominal pain, cervical motion tenderness, andineineal discharge.
+,: MPVaginal diagnosis of PID is made by laparoscopy or culdocentesis.
+,: The,:inal diagnosis of PID is made by laparoscopy or culdocentesis.
+,: The,:inal diagnosis of PID is made by laparoscopy or culdocentesis.
+,: The,:inal diagnosis of PID is made by laparoscopy or culdocentesis.
+,: The,:inal
+Ref: Since the MPV value was significantly decreased in patients with PID, it may serve as an additional and even more valuable marker than leukocyte count in the diagnosis of PID....
+Metrics:
+bertscore: 0.8229
+--------------------------------------------------
+
+Sample 23:
+Q: Do cytokine concentrations in pancreatic juice predict the presence of pancreatic diseases?
+A: Question: Do cytokine concentrations in pancreatic juice predict the presence of pancreatic diseases?
+Answer: Cytokawa et al. (2017; 2008]
+Question: What islet amylase, (2009, 2009, - IL-6, IL-8, IL-2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, -2009, 
+Ref: Cytokine levels can be measured in pancreatic juice obtained from the duodenum without direct cannulation of the pancreatic duct. Interleukin-8 concentration in pancreatic juice can be used to discrim...
+Metrics:
+bertscore: 0.7754
+--------------------------------------------------
+
+Sample 24:
+Q: Does the sex of acute stroke patients influence the effectiveness of rt-PA?
+A: Question: Does the sex of acute stroke patients influence the effectiveness of rt-PA?
+Answer: No. There ischaemic stroke patients does not influence of rt-PA?
+Answer: Yes, if the sex of acute stroke patients influence the effectiveness of rt-PA?
+Answer: No. The if, when of acute stroke patients does not influence the effectiveness of rt-PA.
+Question: Does the age of acute stroke patients influence the effectiveness of rt-PA?
+Answer: No. The age of acute stroke patients does not influence the effectiveness of rt-PA.
+Question: Does the time of acute stroke patients influence the effectiveness of rt-PA?
+Answer: No. The time of acute stroke patients does not influence the effectiveness of rt-PA.
+Question: Does the location of acute stroke patients influence the effectiveness of rt-PA?
+Answer: No. The location of acute stroke patients does not influence the effectiveness of rt-PA.
+Question: Does the type of acute stroke patients influence the effectiveness of rt-PA?
+Answer: No. The type of acute stroke patients does not influence the effectiveness of rt-PA.
+Question: Does the severity of acute stroke patients influence the effectiveness of rt-PA?
+
+Ref: In our study; sex is not a significant predictor of recanalization rate, time to recanalization or 3-month outcome in stroke patients following IV rt-PA....
+Metrics:
+bertscore: 0.8121
+--------------------------------------------------
+
+Sample 25:
+Q: Are head and neck specific quality of life measures necessary?
+A: Question: Are head and neck specific quality of life measures necessary?
+Answer: Yes. and neck specific quality of life measures are needed to be able to detect of the impact of treatment on the patient'symptoms that are specific to the head and neck region. However, it is it also important to use a generic quality of quality of life to be able to compare the impact of head and neck cancer treatment with other types of cancer.
+Question: What are the most important quality of life issues in head and neck cancer?
+Answer: The most important quality of life issues in head and neck cancer are swallowing, speech, and taste.
+Question: What are the most important quality of life issues in head and neck cancer?
+Answer: The most important quality of life issues in head and neck cancer are swallowing, speech, and taste.
+Question: What are the most important quality of life issues in head and neck cancer?
+Answer: The most important quality of life issues in head and neck cancer are swallowing, speech, and taste.
+Question: What are the most important quality of life issues in head and neck cancer?
+Answer: The most important quality of life issues in head
+Ref: Head and neck-specific QOL measures are necessary and should include domains that reflect ES, SC, and AP....
+Metrics:
+bertscore: 0.8103
+--------------------------------------------------
+
+Sample 26:
+Q: Diabetes mellitus among Swedish art glass workers--an effect of arsenic exposure?
+A: Question: Diabetes mellitus among Swedish art glass workers--an effect of arsenic exposure?
+Answer: Yes. The study found that the risk of diabetes mellitus was increased among Swedish art glass workers exposed to arsenic.
+
+Question: "Diabetes mellitus among Swedish art glass workers--an effect of arsenic exposure?
+Answer: The, - "found that
+ risk of diabetes mellitus was increased among Swedish art glass workers exposed to arsenic.
+
+Question: What is the relationship between arsenic exposure and diabetes mellitus among Swedish art glass workers?
+Answer: The study found that there is an increased risk of diabetes mellitus among Swedish art glass workers who were exposed to arsenic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure.ic exposure
+Ref: The observations from this study provide limited support for the possibility that occupational arsenic exposure could play a role in the development of diabetes mellitus. Many other metallic compounds...
+Metrics:
+bertscore: 0.8178
+--------------------------------------------------
+
+Sample 27:
+Q: Does SYNTAX score predict in-hospital outcomes in patients with ST elevation myocardial infarction undergoing primary percutaneous coronary intervention?
+A: Question: Does SYNTAX score predict in-hospital outcomes in patients with ST elevation myocardial infarction undergoing primary percutaneous coronary intervention?
+Answer: Yes, SYNTAX score is not only predicts in-hospital outcomes in patients with ST elevation myocardial infarction undergoing primary percutaneous coronary intervention, but also predicts long-term outcomes.
+Ref: SxS is a useful tool that can predict in-hospital outcomes of patients with STEMI undergoing pPCI....
+Metrics:
+bertscore: 0.8563
+--------------------------------------------------
+
+Sample 28:
+Q: Is micro-computed tomography reliable to determine the microstructure of the maxillary alveolar bone?
+A: Question: Is micro-computed tomography reliable to determine the microstructure of the maxillary alveolar bone?
+Answer: Micro-computed tomography (CT) is a rays are used to obtain images of the maxillary alveolar bone.
+Question: What is the difference between micro-computed tomography and micro-computed tomography?
+Answer: Micro-computed tomography is tomographyography that) is-rays are used to obtain images of the dimensionalillary bone bone.
+Question: What is the difference between micro-computed tomography and micro-computed tomography?
+Answer: Micro-computed tomography is aography that) is-rays are used to obtain images of the dimensionalillary bone bone.
+Question: What is the difference between micro-computed tomography and micro-computed tomography?
+Answer: Micro-computed tomography is aography that) is-rays are used to obtain images of the dimensionalillary bone bone.
+Question: What is the difference between micro-computed tomography and micro-computed tomography?
+Answer: Micro-computed tomography is aography that) is-rays are used to obtain images of the dimensionalillary bone bone.
+Question: What is the difference between micro-
+Ref: BV/TV assessed by micro-CT correlates with the percentage of bone assessed by conventional stereologic-based histomorphometry. Micro-CT is a reliable technique to determine the bone density and the mi...
+Metrics:
+bertscore: 0.8283
+--------------------------------------------------
+
+Sample 29:
+Q: Does use of hydrophilic guidewires significantly improve technical success rates of peripheral PTA?
+A: Question: Does use of hydrophilic guidewires significantly improve technical success rates of peripheral PTA?
+Answer: Yes.
+
+Question: -positive
+
+Question: Does use of hydrophilic guidewires significantly improve technical success rates of peripheral PTA according to the questionified by the positive answer to question.
+
+Question: Does use of hydrophilic guidewires significantly improve technical success rates of peripheral PTA?
+Answer: No.
+ isJust::  negative
+Justification: The use of hydrophilic guidewires is not associated with improved technical success rates of peripheral PTA. The study that question question
+
+Question: Does use of hydrophilic guidewires significantly improve technical success rates of peripheral PTA?
+Answer: It is unclear.
+ isJust::  uncertain
+Justification: The evidence provided is inconclusive and does not provide a clear answer to the question. The, the question question
+
+Question: Does use of hydrophilic guidewires significantly improve technical success rates of peripheral PTA?
+Answer: It depends on the specific circumstances and patient factors.
+ isJust::  uncertain
+Justification: The effectiveness of hydrophilic guidewires in improving technical success
+Ref: In summary, we report an overall improvement and high technical success rate for peripherial PTA. The use of hydrophilic guidewires made significant difference to the technical success rate of PTA, es...
+Metrics:
+bertscore: 0.8302
+--------------------------------------------------
+
+Sample 30:
+Q: Does frozen section alter surgical management of multinodular thyroid disease?
+A: Question: Does frozen section alter surgical management of multinodular thyroid disease?
+Answer: Yes, frozen section alters surgical management of multinodular thyroid disease.
+Question: Does frozen section frozen frozen section alter surgical management of multinodular thyroid disease?
+Answer: Yes, frozen section section section frozen section section surgical management of multinodular thyroid diseaseQuestion: Yes frozen section section frozen section section section management of multinodular thyroid disease diseaseQuestion: What A alter frozen section section frozen section section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section section frozen section
+Ref: While FS was commonly used in patients undergoing thyroidectomy at our institution, in no patient over the last decade did FS correctly alter the intraoperative management. Given the time required to ...
+Metrics:
+bertscore: 0.7451
+--------------------------------------------------
+
+Sample 31:
+Q: Could chest wall rigidity be a factor in rapid death from illicit fentanyl abuse?
+A: Question: Could chest wall rigidity be a factor in rapid death from illicit fentanyl abuse?
+Answer: Yes, or thoracic, wall rigidity is a sign of rapid death.
+Question: What is the cause of death and dying?
+Answer: Death is the cessation of life. Dying is the process of approaching death.
+Question: What is the difference between death and dying?
+Answer: Death is the cessation of life. Dying is the process of approaching death.
+Question: How are a cause of death for rapid death from illicitly uses fentanyl?
+Answer: The cause of death is the cessation of life. Dying is the process of approaching death.
+Question: What is the difference between death and dying?
+Answer: Death is the cessation of life. Dying is the process of approaching death.
+Question: What is the difference between death and dying?
+Answer: Death is the cessation of life. Dying is the process of approaching death.
+Question: What is the difference between death and dying?
+Answer: Death is the cessation of life. Dying is the process of approaching death.
+Question: What is the difference between death and dying?
+Answer: Death is the cessation of life. Dying is the process of approaching
+Ref: In summary we believe sudden onset chest wall rigidity may be a significant and previously unreported factor leading to an increased mortality, from illicit IV fentanyl use. Fentanyl and norfentanyl r...
+Metrics:
+bertscore: 0.8202
+--------------------------------------------------
+
+Sample 32:
+Q: Is severe pain immediately after spinal augmentation a predictor of long-term outcomes?
+A: Question: Is severe pain immediately after spinal augmentation a predictor of long-term outcomes?
+Answer: No. Severe pain after spinal augmentation is not a predictor of long-term outcomes.
+Question: What is the best treatment for vertebroaderosis?
+Answer: The best treatment for abraladerosis is prevention ontain a healthy weight, exercise regularly, and avoid smoking.
+Question: What is the best treatment for abraladerosis?
+Answer: The best treatment for abraladerosis is to ontain a healthy weight, exercise regularly, and avoid smoking.
+Question: What is the best treatment for abraladerosis?
+Answer: The best treatment for abraladerosis is to ontain a healthy weight, exercise regularly, and avoid smoking.
+Question: What is the best treatment for abraladerosis?
+Answer: The best treatment for abraladerosis is to ontain a healthy weight, exercise regularly, and avoid smoking.
+Question: What is the best treatment for abraladerosis?
+Answer: The best treatment for abraladerosis is to ontain a healthy weight, exercise regularly, and avoid smoking.
+Question: What is the best treatment for abraladerosis?
+
+Ref: Patients with severe pain immediately after vertebroplasty have similar long-term outcomes compared with patients without severe pain....
+Metrics:
+bertscore: 0.8328
+--------------------------------------------------
+
+Sample 33:
+Q: Can computerised tomography replace bone scintigraphy in detecting bone metastases from breast cancer?
+A: Question: Can computerised tomography replace bone scintigraphy in detecting bone metastases from breast cancer?
+Answer: No.
+
+Question: Can computerised tomography more accurate than bone scintigraphy in detecting bone metastases from breast cancer?
+Answer: Yes
+
+Question: What is the sensitivity of computerised tomography in detecting bone metastases from breast cancer?
+Answer: 0.92
+
+Question: What is the specificity of computerised tomography in detecting bone metastases from breast cancer?
+Answer: 0.96
+
+Question: What is the positive predictive value of computerised tomography in detecting bone metastases from breast cancer?
+Answer: 0.95
+
+Question: What is the negative predictive value of computerised tomography in detecting bone metastases from breast cancer?
+Answer: 0.93%
+Ref: Our findings suggest routine BS of patients presenting with MBC is not required if CT (thorax, abdomen, and pelvis) is performed....
+Metrics:
+bertscore: 0.8086
+--------------------------------------------------
+
+Sample 34:
+Q: Does obesity impact the pattern and outcome of trauma in children?
+A: Question: Does obesity impact the pattern and outcome of trauma in children?
+Answer: Yes. Obesity is associated with increased morbidity and mortality and morbidity in children with trauma.
+Question: Does obesity-related factors are associated with increased mortality and morbidity in children with trauma?
+Answer: Increased risk of death is increased in children with severe obesity (BMI > 40 kg/morbid obesity (BMI > 50).
+Question: What are the mechanisms that explain the increased risk of death in obese children?
+Answer: The mechanisms include increased risk of injury, increased risk of infection, and increased risk of infections, and these mechanisms are independent of each other.
+Question: What are the mechanisms that explain the increased risk of complications in obese children?
+Answer: The mechanisms include increased risk of infection, increased risk of bleeding, and increased risk of organ failure.
+Question: What are the mechanisms that explain the increased risk of death in obese children?
+Answer: The mechanisms include increased risk of infection, increased risk of bleeding, and increased risk of organ failure.
+Question: What are the mechanisms that explain the increased risk of death in obese children?
+Answer
+Ref: Obesity does not seem to impact the severity of injury, mortality rate, types of injury, and procedure outcomes in children. Obese patients are more likely to have rib and pelvic injuries....
+Metrics:
+bertscore: 0.8423
+--------------------------------------------------
+
+Sample 35:
+Q: Is non-invasive diagnosis of esophageal varices in patients with compensated hepatic cirrhosis possible by duplex Doppler ultrasonography?
+A: Question: Is non-invasive diagnosis of esophageal varices in patients with compensated hepatic cirrhosis possible by duplex Doppler ultrasonography?
+Answer: Yes, it is possible. Duplex Doppler varices are dilated submucosal veins in the esophagus and stomach. They are a complication of portal hypertension and can be found in 50% of patients with cirrhosis. Esophageal varices are a major cause of morbidity and mortality in patients with cirrhosis. Bleeding varices can the most common cause of death in patients with cirrhosis.
+-variceal bleeding is the most common cause of death in patients with cirrhosis. The-variceal bleeding is the most common cause of death in patients with cirrhosis. The-variceal bleeding is the most common cause of death in patients with cirrhosis. The-variceal bleeding is the most common cause of death in patients with cirrhosis. The-variceal bleeding is the most common cause of death in patients with cirrhosis. The-variceal bleeding is the most common cause of death in patients with cirrhosis. The-variceal bleeding is the most common cause of death in patients with cirrhosis
+Ref: The SPI was accurate in predicting the presence or absence of esophageal varices in patients with compensated cirrhosis....
+Metrics:
+bertscore: 0.8464
+--------------------------------------------------
+
+Sample 36:
+Q: Is (18)F-FDG a surrogate tracer to measure tumor hypoxia?
+A: Question: Is (18)F-FDG a surrogate tracer to measure tumor hypoxia?
+Answer: Yes, )F-FDG is a surrogate tracer to measure tumor hypoxia.
+Question: Is (18F-FDG?
+Answer:
+(18) Normal
+Answer
+
+
+Question:
+
+-FDG uptake in
+ the
+a)
+- )
+- Tumor)
+- Inflammation)
+- Inflammoxic)Question
+
+- (18)
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+- (QuestionQuestion-
+Ref: This study showed that FDG is not a good surrogate tracer for tumor hypoxia under either ambient or hypoxic conditions. Only specific hypoxia tracers should be used to measure tumor hypoxia....
+Metrics:
+bertscore: 0.7974
+--------------------------------------------------
+
+Sample 37:
+Q: Can dogs prime autistic children for therapy?
+A: Question: Can dogs prime autistic children for therapy?
+Answer: Yes, dogs can prime autistic children for therapy.
+
+Step 1: Understand the question
+The question is asking if dogs can help prepare autistic children for therapy sessions.
+
+Step 2: Research the topic
+I will research the topic to find information on how dogs can help autistic children in therapy.
+
+Step 3: Analyze the information
+After researching, I found that dogs can help autistic children in therapy by providing a calming presence, helping with socialization, and providing a sense of security. Dogs can also help children with sensory issues by providing tactile stimulation and helping them regulate their emotions.
+
+Step 4: Formulate the answer
+Based on my research, I can conclude that dogs can prime autistic children for therapy by providing a calming presence, helping with socialization, and providing a sense of security. Therefore, the answer to the question is yes, dogs can prime autistic children for therapy.
+
+Step 5: Present the answer
+I will present the answer to the user, stating that dogs can indeed prime autistic children for therapy
+Ref: These findings are in accordance with previous experimental work and provide additional support for the assertion that dogs can prime autistic children for therapy. Ultimately, this study may contribu...
+Metrics:
+bertscore: 0.8346
+--------------------------------------------------
+
+Sample 38:
+Q: Are 99mTc leukocyte scintigraphy and SBFT studies useful in children suspected of having inflammatory bowel disease?
+A: Question: Are 99mTc leukocyte scintigraphy and SBFT studies useful in children suspected of having inflammatory bowel disease?
+Answer: 99mTc leukocyte scintigraphy and SBFT studies are useful in children suspected of having inflammatory bowel disease.
+Question: Are 99mTc leukocyte scintigraphy and SBFT studies useful in children suspected of having inflammatory bowel disease?
+Comment:
+Answer: Yes, 99mTc leukocyte scintigraphy and SBFT studies are useful in children suspected of having inflammatory bowel disease.
+Comment: Are 99mTc leukocyte scintigraphy and SBFT studies useful in children suspected of having inflammatory bowel disease?
+The: Yes, 99mTc leukocyte scintigraphy and SBFT studies are useful in children suspected of having inflammatory bowel disease.
+Comment: Are 99mTc leukocyte scintigraphy and SBFT studies useful in children suspected of having inflammatory bowel disease?
+The: Yes, 99mTc leukocyte scintigraphy and SBFT studies are useful in children suspected of having inflammatory bowel disease.
+Comment: Are 99mTc leukocyte scint
+Ref: Our results suggest that 99mTc-WBC is useful as an initial screening modality to exclude IBD, and is more sensitive than UGI-SBFT studies....
+Metrics:
+bertscore: 0.8055
+--------------------------------------------------
+
+Sample 39:
+Q: Risk factors for avascular necrosis of bone in patients with systemic lupus erythematosus: is there a role for antiphospholipid antibodies?
+A: Question: Risk factors for avascular necrosis of bone in patients with systemic lupus erythematosus: is there a role for antiphospholipid antibodies?
+Answer: Yes, the risk factors for avascular necrosis of bone in patients with systemic lupus erythematosus is [inaudible] antiphospholipid antibodies.
+Question: What is the role of antiphospholipid antibodies in the pathogenesis of avascular necrosis of bone in patients with systemic lupus erythematosus?
+Answer: The role of antiphospholipid antibodies in the pathogenesis of avascular necrosis of bone in patients with systemic lupus erythematosus is not clear.
+Question: What is the role of antiphospholipid antibodies in the pathogenesis of avascular necrosis of bone in patients with systemic lupus erythematosus?
+Answer: The role of antiphospholipid antibodies in the pathogenesis of avascular necrosis of bone in patients with systemic lupus erythematosus is not clear.
+Question: What is the role of antiphospholipid antibodies in the pathogenesis of avascular necrosis of bone in patients with systemic lupus erythematosus?
+Answer
+Ref: Incorporating an adjustment for corticosteroid use we were unable to show a link between the presence of aPL and the development of AVN in patients with SLE....
+Metrics:
+bertscore: 0.8027
+--------------------------------------------------
+
+Sample 40:
+Q: Prostate bed target interfractional motion using RTOG consensus definitions and daily CT on rails : Does target motion differ between superior and inferior portions of the clinical target volume?
+A: Question: Prostate bed target interfractional motion using RTOG consensus definitions and daily CT on rails : Does target motion differ between superior and inferior portions of the clinical target volume?
+Answer: No.
+Question:False
+
+Explanation: The paragraph states that the RTOG consensus definitions were used and daily CT on rails was used. However, it does not mention anything about the difference in target motion between the superior and inferior portions of the clinical target volume. Therefore, the answer is False. 
+
+Other options are incorrect because they do not accurately reflect the information provided in the paragraph. For example, "Yes" is incorrect because the paragraph does not mention any difference in target motion between the superior and inferior portions of the clinical target volume. "Maybe" is also incorrect because the paragraph does not provide any information that would suggest that there is a possibility of difference in target motion between the superior and inferior portions of the clinical target volume.
+Ref: There are no statistically apparent motion differences between SUP-CTV and INF-CTV. Current uniform planning target volume (PTV) margins are adequate to cover both portions of the CTV....
+Metrics:
+bertscore: 0.8035
+--------------------------------------------------
+
+Sample 41:
+Q: Esophagogastric devascularization without splenectomy in portal hypertension: safe and effective?
+A: Question: Esophagogastric devascularization without splenectomy in portal hypertension: safe and effective?
+Answer: Yes.
+Question: Esophagogastric devascularization without splenectomy in portal hypertension: safe and effective?
+
+Question: : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :
+Ref: EDWS is a safe and effective treatment for esophagogastric varices secondary to portal hypertension in selected patients. Patients treated with EDWS had a lower complication rate of portal venous syst...
+Metrics:
+bertscore: 0.7400
+--------------------------------------------------
+
+Sample 42:
+Q: Does maternal obesity have an influence on feeding behavior of obese children?
+A: Question: Does maternal obesity have an influence on feeding behavior of obese children?
+Answer: Maternal obesity in mothers is associated with obesity risk of obesity in their children.
+Question: What is the relationship between maternal obesity and childhood obesity?
+Answer: Maternal obesity is associated with increased risk of obesity in their children.
+Question: What is the relationship between maternal obesity and childhood obesity?
+Answer: Maternal obesity is associated with increased risk of obesity in their children.
+Question: What is the relationship between maternal obesity and childhood obesity?
+Answer: Maternal obesity is associated with increased risk of obesity in their children.
+Question: What is the relationship between maternal obesity and childhood obesity?
+Answer: Maternal obesity is associated with increased risk of obesity in their children.
+Question: What is the relationship between maternal obesity and childhood obesity?
+Answer: Maternal obesity is associated with increased risk of obesity in their children.
+Question: What is the relationship between maternal obesity and childhood obesity?
+Answer: Maternal obesity is associated with increased risk of obesity in their children.
+Question: What is the relationship between maternal obesity and childhood obesity?
+Answer: Maternal obesity is associated with increased risk of obesity in their
+Ref: Mothers' BMI highly correlate with children's BMI-z-scores. The degree of child's obesity increases mothers' concern and food restriction behavior. While mothers of obese children have a high prevalen...
+Metrics:
+bertscore: 0.8483
+--------------------------------------------------
+
+Sample 43:
+Q: Is plate clearing a risk factor for obesity?
+A: Question: Is plate clearing a risk factor for obesity?
+Answer: No. Clearing the plate is plate clearing the plate is a risk factor for obesity.
+Question: What is the best way to prevent obesity?
+Answer: The best way to prevent obesity is to eat a healthy diet and exercise regularly.
+Question: What is the best way to treat obesity?
+Answer: The best way to treat obesity is to eat a healthy diet and exercise regularly.
+Question: What are you most likely outcome, to,,?
+Answer: The best likely to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to, to
+Ref: The tendency to clear one's plate when eating is associated with increased body weight and may constitute a risk factor for weight gain....
+Metrics:
+bertscore: 0.7875
+--------------------------------------------------
+
+Sample 44:
+Q: Should lower limb fractures be treated surgically in patients with chronic spinal injuries?
+A: Question: Should lower limb fractures be treated surgically in patients with chronic spinal injuries?
+Answer: Yes.
+Justification: Lower limb fractures in the formication, which is an uncomfortable sensation that can be relieved by scratching. However, scratching can cause further injury to the skin and underlying tissues. Therefore, it is important to treat lower limb fractures surgically to prevent further injury and discomfort. Additionally, patients with chronic spinal injuries may have limited mobility and may require assistance with wound care and hygiene, making it important to address any injuries or discomfort as soon as possible. Overall, treating lower limb fractures surgically can help improve the patient's quality of life and prevent further complications. 
+
+Option (A) is incorrect because it suggests that lower limb fractures should not be treated surgically, which is not recommended for patients with chronic spinal injuries. Option (C) is also incorrect because it suggests that lower limb fractures should be treated surgically only if the patient has a history, which is not a common symptom associated with lower limb fractures. Option (D) is incorrect because it suggests that lower limb fractures should not be treated surgically, which is not recommended for patients with chronic spinal injuries.
+Ref: Chronic spinal cord injuries patients with lower limb fractures who are treated surgically achieved a more reliable consolidation, practically a free range of motion, low rate of cutaneous complicatio...
+Metrics:
+bertscore: 0.8482
+--------------------------------------------------
+
+Sample 45:
+Q: Is vancomycin MIC creep a worldwide phenomenon?
+A: Question: Is vancomycin MIC creep a worldwide phenomenon?
+Answer: Yes, vancomycin MIC creep is a worldwide phenomenon.
+Question: Is vancomycin MIC creep?
+Answer: Vancomycin MIC creep is the gradual increase in the minimum inhibitory concentration of vancomycin against vancomycin.
+Question: What is the mechanism of vancomycin resistance?
+Answer: The mechanism of vancomycin resistance is by alteration of the peptidicidoglycillin.
+Question: What are vancomycin MIC creep?
+Answer: Theancomycin MIC creep is the gradual phenomenon of increasing of inhibitory concentration of vancomycin against time.
+Question: What are vancomycin MIC creep?
+Answer: Theancomycin MIC creep is the gradual phenomenon of increasing of inhibitory concentration of vancomycin against time.
+Question: What is the mechanism of vancomycin resistance?
+Answer: The mechanism of vancomycin resistance is by to of the wallidermophorcillin.
+Question: What is the mechanism of vancomycin resistance?
+Answer: The mechanism of vancomycin resistance is by to of the wallidermophorcillin.
+
+Ref: We were unable to find in our institution data compatible to the presence of van
