@@ -27,7 +27,8 @@ class Evaluator:
         self.bertscore = evaluate.load('bertscore')
         # self.scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'])
 
-    def generate_batch(self, questions, batch_size=4, max_length=256):
+    def generate_batch(self, questions, batch_size=2, max_length=256):
+        torch.cuda.empty_cache()
         generated_answers = []
         for i in range(0, len(questions), batch_size):
             batch = questions[i:i + batch_size]
