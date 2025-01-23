@@ -1,18 +1,25 @@
-import neptune
-import secret_config
-run = neptune.init_run(
-    project="secret_config.neptune_project",
-    api_token="secret_config.neptune_api_token",
-)  # your credentials, make sure you have the secret_config file and that it's in gitignore
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import transformers
+import torch
 
+model = "tiiuae/falcon-7b"
 
-params = {"learning_rate": 0.001, "optimizer": "Adam"}
-run["parameters"] = params
-
-for epoch in range(10):
-    run["train/loss"].append(0.9 ** epoch)
-    # insert your training loop here
-
-run["eval/f1_score"] = 0.66
-
-run.stop()
+tokenizer = AutoTokenizer.from_pretrained(model)
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    torch_dtype=torch.bfloat16,
+    trust_remote_code=True,
+    device_map="auto",
+)
+sequences = pipeline(
+   "What is the temperature of the sun?",
+    max_length=200,
+    do_sample=True,
+    top_k=10,
+    num_return_sequences=1,
+    eos_token_id=tokenizer.eos_token_id,
+)
+for seq in sequences:
+    print(f"Result: {seq['generated_text']}")
