@@ -72,7 +72,7 @@ class Evaluator:
             'bertscore': bertscore_future.result()
         }
 
-def evaluate_model(n_samples=10, batch_size=4):
+def evaluate_model(n_samples=500, batch_size=4):
     # Load dataset
     dataset = load_dataset("pubmed_qa", "pqa_labeled", split="train")
     test_samples = dataset.select(range(len(dataset)-n_samples, len(dataset)))
