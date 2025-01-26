@@ -24,9 +24,9 @@ class Evaluator:
         self.model = AutoModelForCausalLM.from_pretrained(adapter_path).to(self.device).half()
         self.model.eval()
         
-        # self.meteor = evaluate.load('meteor')
+        self.meteor = evaluate.load('meteor')
         self.bertscore = evaluate.load('bertscore')
-        # self.scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'])
+        self.scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'])
 
     def generate_batch(self, questions, batch_size=2, max_length=256):
         torch.cuda.empty_cache()
@@ -56,9 +56,9 @@ class Evaluator:
 
     def compute_metrics_parallel(self, generated, reference):
         with ThreadPoolExecutor() as executor:
-            # bleu_future = executor.submit(lambda: sentence_bleu([reference.split()], generated.split()))
-            # rouge_future = executor.submit(lambda: self.scorer.score(reference, generated))
-            # meteor_future = executor.submit(lambda: self.meteor.compute(predictions=[generated], references=[reference])['meteor'])
+            bleu_future = executor.submit(lambda: sentence_bleu([reference.split()], generated.split()))
+            rouge_future = executor.submit(lambda: self.scorer.score(reference, generated))
+            meteor_future = executor.submit(lambda: self.meteor.compute(predictions=[generated], references=[reference])['meteor'])
             bertscore_future = executor.submit(lambda: np.mean(self.bertscore.compute(
                 predictions=[generated],
                 references=[reference],
@@ -66,13 +66,13 @@ class Evaluator:
             )['f1']))
 
         return {
-            # 'bleu': bleu_future.result(),
-            # 'rouge_scores': rouge_future.result(),
-            # 'meteor': meteor_future.result(),
+            'bleu': bleu_future.result(),
+            'rouge_scores': rouge_future.result(),
+            'meteor': meteor_future.result(),
             'bertscore': bertscore_future.result()
         }
 
-def evaluate_model(n_samples=500, batch_size=4):
+def evaluate_model(n_samples=200, batch_size=4):
     # Load dataset
     dataset = load_dataset("pubmed_qa", "pqa_labeled", split="train")
     test_samples = dataset.select(range(len(dataset)-n_samples, len(dataset)))
@@ -90,23 +90,23 @@ def evaluate_model(n_samples=500, batch_size=4):
     # Compute metrics
     all_results = []
     print("Computing metrics...")
-    for q, g, r in tqdm(zip(questions, generated_answers, references), total=len(questions)):
-        metrics = evaluator.compute_metrics_parallel(g, r)
+    for question, generated_answer, reference in tqdm(zip(questions, generated_answers, references), total=len(questions)):
+        metrics = evaluator.compute_metrics_parallel(generated_answer, reference)
         result = {
-            'question': q,
-            'generated': g,
-            'reference': r,
+            'question': question,
+            'generated': generated_answer,
+            'reference': reference,
             'metrics': metrics
         }
         all_results.append(result)
     
     # Calculate averages
     avg_metrics = {
-        # 'bleu': np.mean([r['metrics']['bleu'] for r in all_results]),
-        # 'rouge1': np.mean([r['metrics']['rouge_scores']['rouge1'].fmeasure for r in all_results]),
-        # 'rouge2': np.mean([r['metrics']['rouge_scores']['rouge2'].fmeasure for r in all_results]),
-        # 'rougeL': np.mean([r['metrics']['rouge_scores']['rougeL'].fmeasure for r in all_results]),
-        # 'meteor': np.mean([r['metrics']['meteor'] for r in all_results]),
+        'bleu': np.mean([r['metrics']['bleu'] for r in all_results]),
+        'rouge1': np.mean([r['metrics']['rouge_scores']['rouge1'].fmeasure for r in all_results]),
+        'rouge2': np.mean([r['metrics']['rouge_scores']['rouge2'].fmeasure for r in all_results]),
+        'rougeL': np.mean([r['metrics']['rouge_scores']['rougeL'].fmeasure for r in all_results]),
+        'meteor': np.mean([r['metrics']['meteor'] for r in all_results]),
         'bertscore': np.mean([r['metrics']['bertscore'] for r in all_results])
     }
     
